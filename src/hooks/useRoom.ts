@@ -30,7 +30,7 @@ type QuestionType = {
 }
 
 export function useRoom(roomId: string) {
-    const { user } = useAuth()
+    const { user } = useAuth();
 
     const [questions, setQuestions] = useState<QuestionType[]>([])
     const [title, setTitle] = useState('')
@@ -59,7 +59,7 @@ export function useRoom(roomId: string) {
         })
 
         return () => {
-            roomReference.off('value')
+            roomReference.off('value');
         }
     }, [roomId, user?.id])
 
