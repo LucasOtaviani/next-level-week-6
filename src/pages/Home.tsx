@@ -20,14 +20,14 @@ export function Home() {
 
     async function handleCreateRoom() {
         if (!user) {
-            await signInWithGoogle();
+            await signInWithGoogle()
         }
 
-        history.push('/rooms/new');
+        history.push('/rooms/new')
     }
 
     async function handleJoinRoom(event: FormEvent) {
-        event.preventDefault();
+        event.preventDefault()
 
         if (roomCode.trim() === '') 
             return
@@ -70,5 +70,5 @@ export function Home() {
                 </div>
             </main>
         </div>
-    );
+    )
 }

@@ -13,9 +13,9 @@ import '../styles/auth.scss'
 import { Button } from '../components/Button'
 
 export function NewRoom() {
-    const history = useHistory();
+    const history = useHistory()
     const { user } = useAuth()
-    const [newRoom, setNewRoom] = useState('');
+    const [newRoom, setNewRoom] = useState('')
 
     async function handleCreateRoom(event: FormEvent) {
         event.preventDefault()
@@ -30,7 +30,7 @@ export function NewRoom() {
             authorId: user?.id
         })
 
-        history.push(`/rooms/${firebaseRoom.key}`);
+        history.push(`/rooms/${firebaseRoom.key}`)
     }
 
     return (
@@ -61,5 +61,5 @@ export function NewRoom() {
                 </div>
             </main>
         </div>
-    );
+    )
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { AuthContextProvider } from "./contexts/AuthContext"
 import { Home } from "./pages/Home"
 import { NewRoom } from "./pages/NewRoom"
-import { Room } from './pages/Room';
+import { Room } from './pages/Room'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </Switch>
       </AuthContextProvider>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
